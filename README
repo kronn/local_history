@@ -1,0 +1,25 @@
+                                  LocalHistory
+================================================================================
+
+Small Ruboto App for looking up the street you are currently near.
+
+One goal is to have it also look up further details like the history.
+
+
+Development
+====================
+
+Enviroment
+--------------------
+# create an emulator
+android -s create avd -f -n Android_4.1 -t android-16 --sdcard 64M
+
+# run it
+emulator -avd Android_4.1
+
+
+Building
+--------------------
+rake
+rake stop install:clean start
+
