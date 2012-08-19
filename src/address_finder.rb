@@ -20,6 +20,8 @@ class AddressFinder
           puts "google-ask: fail"
           activity.update_address_failed("Arglbarf. #{response.inspect}")
         end
+      ensure
+        client.close if client
       end
     end
   end
