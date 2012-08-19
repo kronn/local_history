@@ -25,8 +25,12 @@ late), the basic steps were these:
 7. In order to load YAML, we need some `with_large_stack_do { ... }` magic
    This eludes me at the moment and is not reflected in the tutorial properly.
    JFGI...
-8. It is kk
+8. next steps would be to show multiple streets in the area an display a list
+9. each list-item would need to trigger a lookup further details.
 
+In the workshop we went as far as step 7. My app does not crash when loading
+YAML, so I guess that I am not testing good enough. This repo does (to my knowledge)
+not contain any substantial tests.
 
 ## Development
 
