@@ -36,6 +36,7 @@ $activity.start_ruboto_activity("$local_history") do
         @address_view = text_view :text => ''
       end
       button :text => "Do it now!", :on_click_listener => @handle_click
+      button :text => "Reset", :on_click_listener => @handle_reset
     end
   end
 
@@ -81,5 +82,13 @@ $activity.start_ruboto_activity("$local_history") do
     end
     gps_loc = @lm.getLastKnownLocation(LocationManager::GPS_PROVIDER)
     update_location(gps_loc)
+  end
+  @handle_reset = proc do |view|
+    begin
+      @time_view.text = ''
+      @lat_view.text = ''
+      @lng_view.text = ''
+      @address_view.text = ''
+    end
   end
 end
